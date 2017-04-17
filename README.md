@@ -10,7 +10,7 @@ For details [here]()
  *	Minimum display resolution: 1024x768
 
  ##### Modelling environment 
-   * Visual Paradigm (almeno versione 12.0)
+   * Visual Paradigm (minimum version 12.0)
  #### Development  environment
    *  Eclipse Luna SR1a (4.4.1) release dependency by System operator
     
@@ -18,7 +18,7 @@ For details [here]()
    * Java SE Development Kit 8 with JavaFX for modelling view (JavaFXScene Builder)
  
  #### Database Management System
- * MySQL Community Server versione 5.6.X
+ * MySQL Community Server version 5.6.X
 
 
 ###Usage
