@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.noleggio.ChiudiNoleggio">
+   <children>
+      <Label layoutX="17.0" layoutY="122.0" text="N. Km Auto Attuali " />
+      <Label layoutX="28.0" layoutY="156.0" text="Data Fine " />
+      <Label layoutX="55.0" layoutY="193.0" text="Note" />
+      <TextArea fx:id="textAreaNote" layoutX="132.0" layoutY="202.0" prefHeight="96.0" prefWidth="191.0" />
+      <DatePicker fx:id="dFineNol" editable="false" layoutX="132.0" layoutY="152.0" onAction="#dRientroAction" />
+      <TextField fx:id="txtKmRientro" layoutX="132.0" layoutY="118.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="400.0" layoutY="94.0" text="Danni Auto" />
+      <Label layoutX="42.0" layoutY="343.0" text="Totale pagamento per ritardo al giorno (0,2%) su acconto) per ogni giorno di ritardo" />
+      <Label layoutX="349.0" layoutY="128.0" prefHeight="0.0" prefWidth="28.0" text="Gravi" />
+      <Label layoutX="350.0" layoutY="223.0" text="Futili" />
+      <TextArea fx:id="textAreaDGravi" layoutX="401.0" layoutY="127.0" prefHeight="82.0" prefWidth="200.0" />
+      <TextArea fx:id="textAreaDFutili" layoutX="401.0" layoutY="223.0" prefHeight="71.0" prefWidth="200.0" />
+      <Label layoutX="148.0" layoutY="506.0" text="Numero di giorni" />
+      <Label layoutX="288.0" layoutY="310.0" prefHeight="17.0" prefWidth="200.0" text="Totale danni             €" />
+      <TextField fx:id="txtTotDanni" layoutX="435.0" layoutY="306.0" />
+      <Label fx:id="lblNumGiorni" layoutX="251.0" layoutY="369.0" prefHeight="17.0" prefWidth="79.0" />
+      <Label layoutX="349.0" layoutY="369.0" prefHeight="17.0" prefWidth="200.0" text="Costo (0,2%) su acconto)    €" />
+      <Label fx:id="lblCostoGiorni" layoutX="512.0" layoutY="369.0" prefHeight="17.0" prefWidth="92.0" />
+      <Label layoutX="116.0" layoutY="416.0" text="Totale pagamento per kilometri in eccesso per ogni kilometro in piu" />
+      <Label layoutX="123.0" layoutY="440.0" text="Numero Kilometri in piu" />
+      <Label fx:id="lblNumKilometri" layoutX="267.0" layoutY="440.0" prefHeight="17.0" prefWidth="79.0" />
+      <Label layoutX="349.0" layoutY="440.0" prefHeight="17.0" prefWidth="182.0" text="Costo in base alla fascia al km   €" />
+      <Label fx:id="lblCostoKilometri" layoutX="524.0" layoutY="440.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label layoutX="124.0" layoutY="483.0" text="Cauzione da restituire se il totale è 0 altrimenti viene fatta la differenza" textFill="#b22b2b" />
+      <Label layoutX="150.0" layoutY="532.0" prefHeight="17.0" prefWidth="129.0" text="Cauzione               €" />
+      <Label fx:id="lblCauzione" layoutX="275.0" layoutY="532.0" prefHeight="17.0" prefWidth="98.0" />
+      <Label layoutX="324.0" layoutY="567.0" text="Totale dovuto alla chiusura :        €" />
+      <Label fx:id="lblTotChiusura" layoutX="523.0" layoutY="567.0" prefHeight="17.0" prefWidth="106.0" />
+      <Button layoutX="560.0" layoutY="618.0" mnemonicParsing="false" onAction="#btnConferma" text="Conferma" />
+      <Button layoutX="457.0" layoutY="618.0" mnemonicParsing="false" onAction="#btnIndietro" text="Indietro" />
+      <Label layoutX="123.0" layoutY="466.0" prefHeight="17.0" prefWidth="224.0" text="Costo totale per kilometri in piu             €" />
+      <Label fx:id="lblTotKm" layoutX="348.0" layoutY="466.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="13.0" layoutY="591.0" text="Nb: Per calcolare gli importi mancanti premere Conferma. Non verrà chiuso immeditamentee il noleggio.. " textFill="#942323">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="532.0" text="Cauzione Rimanente €" />
+      <Label layoutX="541.0" layoutY="532.0" />
+      <Label fx:id="lblCauzRimanente" layoutX="527.0" layoutY="532.0" prefHeight="17.0" prefWidth="106.0" />
+      <Label layoutX="21.0" layoutY="567.0" prefHeight="17.0" prefWidth="182.0" text="Totale del costo Aggiuntivo   €" />
+      <Label fx:id="lblCostoAggiuntivo" layoutX="201.0" layoutY="567.0" prefHeight="17.0" prefWidth="79.0" />
+      <Label layoutX="28.0" layoutY="24.0" text="Chiusura Noleggio">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

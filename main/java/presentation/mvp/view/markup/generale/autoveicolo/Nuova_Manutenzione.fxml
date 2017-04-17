@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1127.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.autoveicolo.Nuova_Manutenzione">
+   <children>
+      <Label layoutX="22.0" layoutY="37.0" prefHeight="62.0" prefWidth="287.0" text="Nuova Manutenzione">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Group />
+      <RadioButton fx:id="radio_ord" layoutX="68.0" layoutY="128.0" mnemonicParsing="false" text="Ordinaria">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radio_stra" layoutX="191.0" layoutY="128.0" mnemonicParsing="false" text="Straordinaria">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="22.0" layoutY="203.0" text="Data Inizio :" />
+      <DatePicker fx:id="data_inizio" layoutX="91.0" layoutY="199.0" prefHeight="26.0" prefWidth="218.0" />
+      <Label layoutX="39.0" layoutY="325.0" text="Motivo: " />
+      <TextArea fx:id="motivo" layoutX="91.0" layoutY="256.0" prefHeight="171.0" prefWidth="342.0" />
+      <Label layoutX="527.0" layoutY="203.0" text="Auto:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="immagine" fitHeight="209.0" fitWidth="342.0" layoutX="726.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="518.0" layoutY="293.0" text="Targa: " />
+      <Label layoutX="513.0" layoutY="335.0" text="Modello:" />
+      <Button layoutX="596.0" layoutY="522.0" mnemonicParsing="false" onAction="#btnconferma" prefHeight="42.0" prefWidth="160.0" text="Conferma" />
+      <Button layoutX="418.0" layoutY="522.0" mnemonicParsing="false" onAction="#btnannulla" prefHeight="42.0" prefWidth="160.0" text="Annulla" />
+      <Label fx:id="targa" layoutX="578.0" layoutY="293.0" prefHeight="28.0" prefWidth="101.0" text=" ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="modello" layoutX="580.0" layoutY="329.0" prefHeight="28.0" prefWidth="101.0" text=" ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="600.0" text="N.B.: Una volta confermato la disponibilità dell'auto sarà modificata e non sarà possibile noleggiarla fino alla chiusura della manutenzione" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

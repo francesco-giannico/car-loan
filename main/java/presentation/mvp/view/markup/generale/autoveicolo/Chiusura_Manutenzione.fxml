@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1127.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.autoveicolo.Chiusura_Manutenzione">
+   <children>
+      <Label layoutX="22.0" layoutY="37.0" prefHeight="62.0" prefWidth="330.0" text="Chiusura Manutenzione">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Group />
+      <Label layoutX="282.0" layoutY="417.0" text="Motivo: " />
+      <TextArea fx:id="motivo" layoutX="359.0" layoutY="376.0" prefHeight="115.0" prefWidth="406.0" />
+      <Label layoutX="569.0" layoutY="51.0" text="Auto:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="immagine" fitHeight="209.0" fitWidth="342.0" layoutX="756.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="548.0" layoutY="148.0" text="Targa: " />
+      <Label layoutX="540.0" layoutY="190.0" text="Modello:" />
+      <Button layoutX="596.0" layoutY="522.0" mnemonicParsing="false" onAction="#btnconferma" prefHeight="42.0" prefWidth="160.0" text="Conferma" />
+      <Button layoutX="418.0" layoutY="522.0" mnemonicParsing="false" onAction="#btnannulla" prefHeight="42.0" prefWidth="160.0" text="Annulla" />
+      <Label fx:id="targa" layoutX="587.0" layoutY="143.0" prefHeight="28.0" prefWidth="101.0" text=" ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="modello" layoutX="596.0" layoutY="184.0" prefHeight="28.0" prefWidth="101.0" text=" ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="600.0" text="N.B.: Una volta confermato la disponibilità dell'auto sarà modificata e non sarà possibile noleggiarla fino alla chiusura della manutenzione" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="308.0" text="Data fine manutenzione: " />
+      <Label fx:id="datafine" layoutX="160.0" layoutY="308.0" prefHeight="17.0" prefWidth="144.0" />
+      <TableView fx:id="table_manutenzioni" layoutX="61.0" layoutY="145.0" prefHeight="124.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="colonna_id" prefWidth="123.0" text="ID" />
+          <TableColumn fx:id="colonna_datainizio" prefWidth="128.0" text="Data Inizio" />
+        </columns>
+      </TableView>
+      <Label layoutX="61.0" layoutY="109.0" text="Manutenzioni ancora aperte :" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="629.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.noleggio.multa.NuovaMulta">
+   <children>
+      <Button layoutX="504.0" layoutY="565.0" mnemonicParsing="false" onAction="#btnConferma" prefHeight="25.0" prefWidth="104.0" text="Conferma" />
+      <Label layoutX="55.0" layoutY="107.0" prefHeight="34.0" prefWidth="188.0" text="Data Multa" />
+      <Label layoutX="55.0" layoutY="196.0" prefHeight="17.0" prefWidth="80.0" text="Importo * " />
+      <Label layoutX="53.0" layoutY="290.0" text="Note" />
+      <DatePicker fx:id="dMulta" editable="false" layoutX="174.0" layoutY="111.0" onAction="#checkDMulta" />
+      <TextArea fx:id="txtAreaNote" layoutX="174.0" layoutY="290.0" prefHeight="200.0" prefWidth="437.0" />
+      <TextField fx:id="txtImporto" layoutX="174.0" layoutY="192.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button layoutX="405.0" layoutY="565.0" mnemonicParsing="false" onAction="#btnCancella" text="Cancella" />
+      <DatePicker fx:id="dScadenzaMulta" editable="false" layoutX="173.0" layoutY="158.0" onAction="#checkDMultaScadenza" />
+      <Label layoutX="53.0" layoutY="162.0" text="Data Scadenza" />
+      <Label fx:id="lblTitolo" layoutX="51.0" layoutY="32.0" text="Nuova Multa">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

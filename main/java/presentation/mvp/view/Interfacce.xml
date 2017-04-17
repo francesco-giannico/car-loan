@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<interfaces>
+    <!--LOGIN -->
+	<interface id="MostraLogin" src ="markup/Login.fxml"></interface>
+	
+	<!-- SC GENERALE -->
+	<interface id="MostraSchermataGenerale" src ="markup/generale/SchermataGenerale.fxml"></interface>
+	
+	<!-- CONTRATTO -->
+	<interface id="MostraSchermataNuovoContratto" src ="markup/generale/contratto/NuovoContratto.fxml"></interface>
+	<interface id="MostraSchermataModificaContratto" src ="markup/generale/contratto/ModificaContratto.fxml"></interface>
+	<interface id="MostraSchermataChiusuraContratto" src ="markup/generale/contratto/ChiudiContratto.fxml"></interface>
+	
+	
+	<!-- CLIENTE -->
+	<interface id="MostraSchermataNuovoCliente" src ="markup/generale/cliente/NuovoCliente.fxml"></interface>
+	<interface id="MostraSchermataModificaCliente" src ="markup/generale/cliente/ModificaCliente.fxml"></interface>
+	
+	<!-- NOLEGGIO -->
+	<interface id="MostraSchermataNuovoNoleggio" src ="markup/generale/noleggio/NuovoNoleggio.fxml"></interface>
+	<interface id="MostraSchermataChiusuraNoleggio" src ="markup/generale/noleggio/ChiudiNoleggio.fxml"></interface>
+	<interface id="MostraSchermataAnnullaNoleggio" src ="markup/generale/noleggio/AnnullaNoleggio.fxml"></interface>
+	
+	<!-- GUIDATORE -->
+	<interface id="MostraSchermataVisualizzaGuidatori" src ="markup/generale/noleggio/guidatore/VisualizzaGuidatore.fxml"></interface>
+	<!-- Autoveicolo -->
+	<interface id="MostraSchermataNuovaAuto" src ="markup/generale/autoveicolo/Nuovo_Autoveicolo.fxml"></interface>
+	<interface id="MostraSchermataModificaAutoveicolo" src="markup/generale/autoveicolo/Modifica_Autoveicolo.fxml"></interface>
+	<!-- Carta di credito -->
+	<interface id="MostraSchermataInserimentoCartaCredito" src ="markup/generale/cartaCredito/NuovaCarta.fxml"></interface>
+	<interface id="MostraSchermataVisualizzaCartaCredito" src ="markup/generale/cartaCredito/VisualizzaCarta.fxml"></interface>
+	<!-- Manutenzione-->
+	<interface id="MostraSchermataNuovaManutenzione" src="markup/generale/autoveicolo/Nuova_Manutenzione.fxml"></interface>
+	<interface id="MostraSchermataChiusuraManutenzione" src="markup/generale/autoveicolo/Chiusura_Manutenzione.fxml"></interface>
+	<interface id="MostraSchermataVisualizzaManutenzione" src="markup/generale/autoveicolo/Visualizza_Manutenzione.fxml"></interface>
+	<!--Agenzia-->
+	<interface id="MostraSchermataNuovaAgenzia" src="markup/generale/luoghi/Nuova_Agenzia.fxml"></interface>
+	<interface id="MostraSchermataModificaAgenzia" src="markup/generale/luoghi/Modifica_Agenzia.fxml"></interface>
+	<!--Sede-->
+	<interface id="MostraSchermataNuovaSede" src="markup/generale/luoghi/Nuova_Sede.fxml"></interface>
+	<interface id="MostraSchermataModificaSede" src="markup/generale/luoghi/Modifica_Sede.fxml"></interface>
+	<!-- OPTIONAL -->
+	<interface id="MostraSchermataVisualizzaOptional" src ="markup/generale/noleggio/optional/VisualizzaOptional.fxml"></interface>
+
+	<!--Amministratore -->
+	<interface id="MostraSchermataNuovoAmministratore" src ="markup/generale/gestori/Nuovo_Amministratore.fxml"></interface>
+	<interface id="MostraSchermataModificaAmministratore" src ="markup/generale/gestori/Modifica_Amministratore.fxml"></interface>
+	
+	
+	<!-- MULTA -->
+	<interface id="MostraSchermataInserimentoMulta" src ="markup/generale/noleggio/multa/NuovaMulta.fxml"></interface>
+	<interface id="MostraSchermataVisualizzaMulte" src ="markup/generale/noleggio/multa/VisualizzaMulte.fxml"></interface>
+	<interface id="MostraSchermataChiusuraMulta" src ="markup/generale/noleggio/multa/ChiusuraMulta.fxml"></interface>
+	
+	<!--SupervisoreSede-->
+	<interface id="MostraSchermataNuovoSupervisoreSede" src ="markup/generale/gestori/Nuovo_SupervisoreSede.fxml"></interface>
+	<interface id="MostraSchermataModificaSupervisoreSede" src ="markup/generale/gestori/Modifica_SupervisoreSede.fxml"></interface>
+	<!--SupervisoreAgenzia-->
+	<interface id="MostraSchermataNuovoSupervisoreAgenzia" src ="markup/generale/gestori/Nuovo_SupervisoreAgenzia.fxml"></interface>
+	<interface id="MostraSchermataModificaSupervisoreAgenzia" src ="markup/generale/gestori/Modifica_SupervisoreAgenzia.fxml"></interface>
+	<!--Operatore-->
+	<interface id="MostraSchermataNuovoOperatore" src ="markup/generale/gestori/Nuovo_Operatore.fxml"></interface>
+	<interface id="MostraSchermataModificaOperatore" src ="markup/generale/gestori/Modifica_Operatore.fxml"></interface>
+</interfaces>

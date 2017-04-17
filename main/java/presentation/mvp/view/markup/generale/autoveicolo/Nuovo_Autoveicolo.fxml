@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.autoveicolo.Nuovo_Autoveicolo">
+   <children>
+      <Label layoutX="16.0" layoutY="14.0" text="Aggiungi Autoveicolo">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="104.0" text="Targa* :" />
+      <Label layoutX="24.0" layoutY="137.0" text="Marca* :" />
+      <TextField fx:id="targa" layoutX="80.0" layoutY="100.0" />
+      <TextField fx:id="marca" layoutX="83.0" layoutY="133.0" />
+      <Label layoutX="20.0" layoutY="174.0" text="Modello* :" />
+      <TextField fx:id="modello" layoutX="83.0" layoutY="170.0" />
+      <Label layoutX="20.0" layoutY="205.0" text="Alimentazione Principale* :" />
+      <TextField fx:id="alimprinc" layoutX="170.0" layoutY="201.0" />
+      <Label layoutX="20.0" layoutY="234.0" text="Alimentazione Secondaria :" />
+      <TextField fx:id="alimsec" layoutX="170.0" layoutY="230.0" />
+      <Label layoutX="23.0" layoutY="270.0" text="Colore :" />
+      <TextField fx:id="colore" layoutX="74.0" layoutY="266.0" />
+      <Label layoutX="20.0" layoutY="300.0" text="Cambio :" />
+      <Label layoutX="19.0" layoutY="351.0" text="Immatricolazione* :" />
+      <DatePicker fx:id="immatricolazione" layoutX="127.0" layoutY="347.0" />
+      <Label layoutX="19.0" layoutY="389.0" text="Cilindrata* :" />
+      <TextField fx:id="cilindrata" layoutX="105.0" layoutY="385.0" prefHeight="25.0" prefWidth="72.0" />
+      <Label layoutX="192.0" layoutY="424.0" text="cm^3" />
+      <Label layoutX="19.0" layoutY="424.0" text="Potenza :" />
+      <TextField fx:id="potenza" layoutX="105.0" layoutY="420.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="183.0" layoutY="389.0" text="W" />
+      <Label layoutX="17.0" layoutY="462.0" text="Numero Posti :" />
+      <ChoiceBox fx:id="nposti" layoutX="109.0" layoutY="458.0" prefHeight="25.0" prefWidth="98.0" />
+      <Label layoutX="14.0" layoutY="495.0" text="Numero Telaio* :" />
+      <TextField fx:id="numtelaio" layoutX="109.0" layoutY="491.0" />
+      <Label layoutX="484.0" layoutY="411.0" text="Disponibilità* :" />
+      <ChoiceBox fx:id="Disponibilita" layoutX="579.0" layoutY="407.0" prefWidth="150.0" />
+      <Label layoutX="15.0" layoutY="548.0" text="Kilometri percorsi :" />
+      <TextField fx:id="kmpercorsi" layoutX="133.0" layoutY="541.0" />
+      <Label layoutX="18.0" layoutY="589.0" text="Capienza portabagagli :" />
+      <TextField fx:id="capienza" layoutX="149.0" layoutY="585.0" />
+      <Label layoutX="962.0" layoutY="319.0" text="Immagine :" />
+      <ImageView fx:id="vistaimmagine" fitHeight="224.0" fitWidth="387.0" layoutX="827.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnchoose" layoutX="1036.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnchooseclick" prefHeight="25.0" prefWidth="117.0" text="..." />
+      <Label layoutX="406.0" layoutY="129.0" text="Data scadenza assicurazione* :" />
+      <DatePicker fx:id="scadenzaass" layoutX="567.0" layoutY="125.0" />
+      <Label layoutX="406.0" layoutY="174.0" prefHeight="17.0" prefWidth="47.0" text="Fascia :" />
+      <ChoiceBox fx:id="fascia" layoutX="446.0" layoutY="170.0" prefWidth="150.0" />
+      <Label layoutX="841.0" layoutY="389.0" prefHeight="17.0" prefWidth="72.0" text="Danni futili :" />
+      <Label layoutX="841.0" layoutY="471.0" prefHeight="17.0" prefWidth="72.0" text="Danni  gravi:" />
+      <TextArea fx:id="danni_futili" layoutX="933.0" layoutY="368.0" prefHeight="59.0" prefWidth="237.0" />
+      <TextArea fx:id="danni_gravi" layoutX="933.0" layoutY="450.0" prefHeight="59.0" prefWidth="237.0" />
+      <Label layoutX="446.0" layoutY="462.0" prefHeight="17.0" prefWidth="49.0" text="Prezzo* :" />
+      <TextField fx:id="prezzo" layoutX="514.0" layoutY="458.0" />
+      <Button fx:id="btnconferma" layoutX="596.0" layoutY="636.0" mnemonicParsing="false" onAction="#btnconferma_click" prefHeight="37.0" prefWidth="117.0" text="Conferma" />
+      <Button fx:id="btnannulla" layoutX="437.0" layoutY="636.0" mnemonicParsing="false" onAction="#btnannulla_click" prefHeight="37.0" prefWidth="117.0" text="Annulla" />
+      <Label fx:id="descrizione_fascia" layoutX="603.0" layoutY="155.0" prefHeight="68.0" prefWidth="201.0" wrapText="true" />
+      <Label layoutX="700.0" layoutY="462.0" text="€" />
+      <ChoiceBox fx:id="cambio" layoutX="74.0" layoutY="299.0" prefHeight="0.0" prefWidth="150.0" />
+      <Label layoutX="374.0" layoutY="300.0" text="Sede di appartenenza :" />
+      <TableView fx:id="tablesedi" layoutX="502.0" layoutY="240.0" prefHeight="119.0" prefWidth="272.0">
+        <columns>
+          <TableColumn fx:id="identifier" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="indirizzo" prefWidth="120.0" text="Indirizzo" />
+        </columns>
+      </TableView>
+      <Label layoutX="413.0" layoutY="533.0" text="Optional Auto :" />
+      <TextArea fx:id="optional_auto" layoutX="502.0" layoutY="519.0" prefHeight="59.0" prefWidth="237.0" />
+      <Label layoutX="841.0" layoutY="545.0" text="Note :" />
+      <TextArea fx:id="Note" layoutX="933.0" layoutY="536.0" prefHeight="59.0" prefWidth="237.0" />
+   </children>
+</AnchorPane>

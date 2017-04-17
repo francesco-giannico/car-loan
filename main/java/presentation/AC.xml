@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <calls>
+         
+    	<!-- Login-->
+    	<call id="login">
+    		<class>business.model.ModelLogin</class>
+    		<method>autenticazione</method>
+    	</call>
+    	
+    	<call id="VerificaLogin">
+    		<class>business.model.checker.LoginChecker</class>
+    		<method>check</method>
+    	</call>
+
+    	<!-- CLIENTE -->
+    	
+    	<call id="InserimentoCliente">
+    		<class>business.model.ModelCliente</class>
+    		<method>Inserimento</method>
+    	</call>
+    	
+    	<call id="ModificaCliente">
+    		<class>business.model.ModelCliente</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	
+    	<call id="letturaCliente">
+    		<class>business.model.ModelCliente</class>
+    		<method>lettura</method>
+    	</call>
+    	
+    	<call id="getAllClienti">
+    		<class>business.model.ModelCliente</class>
+    		<method>getAll</method>
+    	</call>
+
+    	<call id="VerificaCliente">
+    		<class>business.model.checker.cliente.ClienteChecker</class>
+    		<method>check</method>
+    	</call>
+    	<call id="VerificaClienteModificato">
+    		<class>business.model.checker.cliente.ClienteEditChecker</class>
+    		<method>check</method>
+    	</call>
+    	
+    	
+    	<!--Amministratore-->
+    	<call id="letturaAmministratore">
+    		<class>business.model.ModelAmministratore</class>
+    		<method>lettura</method>
+    	</call>
+    	
+    	<!--SupervisoreSede-->
+    	<call id="letturaSupervisoreSede">
+    		<class>business.model.ModelSupervisoreS</class>
+    		<method>lettura</method>
+    	</call>
+    	<call id="ModificaSupervisoreSede">
+    		<class>business.model.ModelSupervisoreS</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	
+    	
+    	<!--SupervisoreAgenzia-->
+    	<call id="letturaSupervisoreAgenzia">
+    		<class>business.model.ModelSupervisoreA</class>
+    		<method>lettura</method>
+    	</call>
+    	
+    	<!--Operatore-->
+    	<call id="letturaOperatore">
+    		<class>business.model.ModelOperatore</class>
+    		<method>lettura</method>
+    	</call>
+    	<call id="getAllOperatori">
+            <class>business.model.ModelOperatore</class>
+            <method>getAll</method>
+        </call>
+       <call id="getAllOperatoriBySede">
+            <class>business.model.ModelOperatore</class>
+            <method>getAllOperatoriBySede</method>
+        </call>
+    
+    	<call id="InserisciOperatore">
+            <class>business.model.ModelOperatore</class>
+            <method>Inserimento</method>
+        </call>
+        
+        <call id="leggiOperatoreByCodiceFiscale">
+            <class>business.model.ModelOperatore</class>
+            <method>leggiOperatoreByCodiceFiscale</method>
+        </call>
+        <call id="ModificaOperatore">
+            <class>business.model.ModelOperatore</class>
+            <method>aggiornamento</method>
+        </call>
+        
+        
+    	<!--CONTRATTO-->
+    	
+    	<call id="InserimentoContratto">
+    		<class>business.model.ModelContratto</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="ModificaContratto">
+    		<class>business.model.ModelContratto</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	<call id="VerificaContratto">
+    		<class>business.model.checker.contratto.ContrattoChecker</class>
+    		<method>check</method>
+    	</call>
+    	
+    	<call id="getAllContratti">
+    		<class>business.model.ModelContratto</class>
+    		<method>getAll</method>
+    	</call>
+    		<call id="letturaContratto">
+    		<class>business.model.ModelContratto</class>
+    		<method>lettura</method>
+    	</call>
+
+    	
+    	
+    	<!--NOLEGGIO-->
+    	<call id="aggiornamentoNoleggio">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>aggiornamentoCompleto</method>
+    	</call>
+    	<call id="InserimentoNoleggio">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="ChiudiNoleggio">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	<call id="AnnullaNoleggio">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	<call id="numNoleggi">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>contaNoleggi</method>
+    	</call>
+    	<call id="RicercaNoleggio">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>ricerca</method>
+    	</call>
+    	<call id="VerificaAnnullaNoleggio">
+    		<class>business.model.checker.noleggio.checkerNoleggio</class>
+    		<method>check</method>
+    	</call>
+
+    	
+    	<call id="getAllNoleggi">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>getAll</method>
+    	</call>
+    	<call id="getNoleggiAperti">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>getNoleggiAperti</method>
+    	</call>
+		<call id="getNoleggiByContratto">
+    		<class>business.model.ModelNoleggio</class>
+    		<method>getNoleggiByContratto</method>
+    	</call>
+
+    	<!--Autoveicolo-->
+    	<call id="letturaFascia">
+    		<class>business.model.ModelFascia</class>
+    		<method>lettura</method>
+    	</call>
+    	<call id="getAllAuto">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAll</method>
+    	</call>
+    	<call id="getAllAutoByFascia">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAllAutoByFascia</method>
+    	</call>
+    	<call id="getAllAutoByFasciaAssicurazione">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAllAutoByFasciaAssicurazione</method>
+    	</call>
+    	<call id="getAllAutoDisponibiliBySede">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAllAutoDisponibiliBySede</method>
+    	</call>
+    	<call id="getAllAutoDisponibiliBySedeAndFasciaAndAssicurazione">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAllAutoDisponibiliBySedeAndFasciaAndAssicurazione</method>
+    	</call>
+    	<call id="getAllAutoDisponibiliBySedeAndFascia">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAllAutoDisponibiliBySedeAndFascia</method>
+    	</call>
+    	<call id="getAllAutoBySedeAndFascia">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>getAllAutoBySedeAndFascia</method>
+    	</call>
+    	<call id="getAllFasce">
+    		<class>business.model.ModelFascia</class>
+    		<method>getAll</method>
+    	</call>
+    	<call id="VerificaAutoveicolo">
+    		<class>business.model.checker.autoveicolo.AutoveicoloChecker</class>
+    		<method>check</method>
+    	</call>
+
+    	<call id="InserimentoAutoveicolo">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="letturaAutoveicolo">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>lettura</method>
+    	</call>
+    	<call id="leggiImmagineAutoveicolo">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>leggi_immagine</method>
+    	</call>
+    	<call id="AggiornamentoAutoveicolo">
+    		<class>business.model.ModelAutoveicolo</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	
+    	
+    	<!--Manutenzione-->
+    	<call id="VerificaManutenzione">
+    		<class>business.model.checker.autoveicolo.ManutenzioneChecker</class>
+    		<method>check</method>
+    	</call>
+    	<call id="InserimentoManutenzione">
+    		<class>business.model.ModelManutenzione</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="ChiusuraManutenzione">
+    		<class>business.model.ModelManutenzione</class>
+    		<method>chiusuraManutenzione</method>
+    	</call>
+    	<call id="getAllManutenzioni_ordinarie">
+    		<class>business.model.ModelManutenzione</class>
+    		<method>getAll_ordinarie</method>
+    	</call>
+    	<call id="getAllManutenzioni_straordinarie">
+    		<class>business.model.ModelManutenzione</class>
+    		<method>getAll_straordinarie</method>
+    	</call>
+    <call id="getAllManutenzioni_ordinarie_aperte">
+    		<class>business.model.ModelManutenzione</class>
+    		<method>getAll_ordinarie_aperte</method>
+    	</call>
+    	<call id="getAllManutenzioni_straordinarie_aperte">
+    		<class>business.model.ModelManutenzione</class>
+    		<method>getAll_straordinarie_aperte</method>
+    	</call>
+    	<!--Sede-->
+    	<call id="getAllSedi">
+    		<class>business.model.ModelSede</class>
+    		<method>getAll</method>
+    	</call>
+    	<call id="leggiSede">
+    		<class>business.model.ModelSede</class>
+    		<method>lettura</method>
+    	</call>
+    	
+    	<call id="getAllSediByAgenzia">
+    		<class>business.model.ModelSede</class>
+    		<method>getAllSediByAgenzia</method>
+    	</call>
+
+    	<!-- CartaDiCredito -->
+    	<call id="InserimentoCarta">
+    		<class>business.model.ModelCartaDiCredito</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="letturaCarta">
+    		<class>business.model.ModelCartaDiCredito</class>
+    	<method>lettura</method>
+    	</call>
+    	<call id="VerificaCarta">
+    		<class>business.model.checker.cartaCredito.CartaCreditoChecker</class>
+    		<method>check</method>
+    	</call>
+    	<call id="getCarteByCliente">
+    		<class>business.model.ModelCartaDiCredito</class>
+    		<method>getAllByCliente</method>
+    	</call>
+    	
+    	<!-- OPTIONAL  -->
+    	<call id="getAllOptional">
+    		<class>business.model.ModelOptional</class>
+    		<method>getAll</method>
+    	</call>
+    	<call id="getAllOptionalByNoleggio">
+    		<class>business.model.ModelOptional</class>
+    		<method>getAllByNoleggio</method>
+    	</call>
+    	
+    	<!-- GUIDATORE -->
+    	<call id="VerificaGuidatore">
+    		<class>business.model.checker.guidatore.GuidatoreChecker</class>
+    		<method>check</method>
+    	</call>
+    	<call id="InserimentoGuidatore">
+    		<class>business.model.ModelGuidatore</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="getAllGuidatoriByNoleggio">
+    		<class>business.model.ModelGuidatore</class>
+    		<method>getAllByNoleggio</method>
+    	</call>
+    	
+    <!--Supervisore Agenzia-->
+
+    	<call id="leggiSupervisoreAgenzia">
+            <class>business.model.ModelSupervisoreA</class>
+            <method>lettura</method>
+        </call>
+        <call id="getAllSupervisoriAgenzia">
+            <class>business.model.ModelSupervisoreA</class>
+            <method>getAll</method>
+        </call>
+<call id="getAllSupervisoriAgenziabyAgenzia">
+            <class>business.model.ModelSupervisoreA</class>
+            <method>getAllbyAgenzia</method>
+        </call>
+    	<!--Supervisore Sede-->
+    	<call id="leggiSupervisoreSede">
+    		<class>business.model.ModelSupervisoreS</class>
+    		<method>lettura</method>
+    	</call>
+    	<call id="leggiSupervisoriSedebySede">
+    		<class>business.model.ModelSupervisoreS</class>
+    		<method>getAll_bysede</method>
+    	</call>
+    	<call id="getAllSupervisoriSede">
+    	<class>business.model.ModelSupervisoreS</class>
+    	<method>getAll</method>
+    	</call>
+
+    	<call id="InserisciSupervisoreSede">
+    	<class>business.model.ModelSupervisoreS</class>
+    	<method>Inserimento</method>
+    	</call>
+
+    	<call id="leggiSupervisoreSedeByCodiceFiscale">
+    	<class>business.model.ModelSupervisoreS</class>
+    	<method>leggiSupervisoreSedeByCodiceFiscale</method>
+    </call>
+
+
+    <!--Supervisore Agenzia-->
+    <call id="InserisciSupervisoreAgenzia">
+        <class>business.model.ModelSupervisoreA</class>
+        <method>Inserimento</method>
+        </call>
+        
+        <call id="leggiSupervisoreAgenziaByCodiceFiscale">
+        <class>business.model.ModelSupervisoreA</class>
+        <method>leggiSupervisoreAgenziaByCodiceFiscale</method>
+    </call>
+    
+     <call id="ModificaSupervisoreAgenzia">
+        <class>business.model.ModelSupervisoreA</class>
+        <method>aggiornamento</method>
+    </call>
+    	<!-- Agenzia-->
+    	<call id="InserisciAgenzia">
+    		<class>business.model.ModelAgenzia</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="AggiornaAgenzia">
+    		<class>business.model.ModelAgenzia</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	<call id="leggiAgenzia">
+    		<class>business.model.ModelAgenzia</class>
+    		<method>lettura</method>
+    	</call>
+    		<call id="getAllAgenzie">
+    		<class>business.model.ModelAgenzia</class>
+    		<method>getAll</method>
+    	</call>
+    	<!-- PAGAMENTO-->
+    	<call id="InserimentoPagamento">
+    		<class>business.model.ModelPagamento</class>
+    		<method>Inserimento</method>
+    	</call>
+    		<call id="letturaPagamento">
+    		<class>business.model.ModelPagamento</class>
+    		<method>lettura</method>
+    	</call>
+    		<call id="aggiornamentoPagamento">
+    		<class>business.model.ModelPagamento</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	
+    	<!--Sede-->
+
+    <call id="InserisciSede">
+    		<class>business.model.ModelSede</class>
+    		<method>Inserimento</method>
+    	</call>
+    	
+    	<call id="AggiornaSede">
+    		<class>business.model.ModelSede</class>
+    		<method>aggiornamento</method>
+    	</call>
+    <!--Amministratore-->
+    <call id="getAllAmministratori">
+    	<class>business.model.ModelAmministratore</class>
+    	<method>getAll</method>
+    </call>
+    <call id="InserisciAmministratore">
+    	<class>business.model.ModelAmministratore</class>
+    	<method>Inserimento</method>
+    </call>
+    <call id="leggiAmministratoreByCodiceFiscale">
+    	<class>business.model.ModelAmministratore</class>
+    	<method>leggiAmministratoreByCodiceFiscale</method>
+    </call>
+
+    <call id="ModificaAmministratore">
+    	<class>business.model.ModelAmministratore</class>
+    	<method>aggiornamento</method>
+    </call>
+    	<!-- MULTA -->
+    	<call id="getAllMulteByNoleggio">
+    		<class>business.model.ModelMulta</class>
+    		<method>getAllMulteByNoleggio</method>
+    	</call>
+    	<call id="countMulteAperteByNoleggio">
+    		<class>business.model.ModelMulta</class>
+    		<method>countMulteAperteByNoleggio</method>
+    	</call>
+    	<call id="InserimentoMulta">
+    		<class>business.model.ModelMulta</class>
+    		<method>Inserimento</method>
+    	</call>
+    	<call id="ChiusuraMulta">
+    		<class>business.model.ModelMulta</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	<call id="CheckMulta">
+    		<class>business.model.checker.multa.checkerMulta</class>
+    		<method>check</method>
+    	</call>
+    	<call id="CheckMultaChiusura">
+    		<class>business.model.checker.multa.checkerChiusuraMulta</class>
+    		<method>check</method>
+    	</call>
+    	
+    	<!--Credenziali-->
+    	<call id="VerificaCredenziali">
+    		<class>business.model.ModelLogin</class>
+    		<method>VerificaCredenziali</method>
+    	</call>
+    	<call id="InserisciCredenziali">
+    		<class>business.model.ModelLogin</class>
+    		<method>Inserimento</method>
+    	</call>
+    	
+    	<call id="ModificaCredenziali">
+    		<class>business.model.ModelLogin</class>
+    		<method>aggiornamento</method>
+    	</call>
+    	<call id="getUsername">
+    		<class>business.model.ModelLogin</class>
+    		<method>getUsername</method>
+    	</call>
+    </calls>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.Login">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="117.0" fitWidth="406.0" layoutY="42.0">
+               <image>
+                  <Image url="@Immagini/log_in_logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;">
+         <children>
+            
+            <TextField fx:id="txtUsername" layoutX="173.0" layoutY="45.0" promptText="Username" />
+            <PasswordField fx:id="txtPsw" layoutX="173.0" layoutY="89.0" promptText="Password" />
+            <Label layoutX="27.0" layoutY="38.0" text="Username :" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="82.0" text="Password :" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="175.0" prefWidth="406.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button layoutX="163.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="39.0" prefWidth="102.0" text="Log In">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Immagini/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnEsci" layoutX="334.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnEsci" prefHeight="25.0" prefWidth="50.0" text="Esci" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

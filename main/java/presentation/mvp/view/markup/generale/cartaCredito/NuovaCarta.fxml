@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="662.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.cartaDicredito.NuovaCarta">
+   <children>
+      <AnchorPane layoutY="107.0" prefHeight="252.0" prefWidth="666.0">
+         <children>
+            <VBox layoutX="406.0" layoutY="12.0" prefHeight="136.0" prefWidth="226.0">
+               <children>
+                  <TextField fx:id="txtIban" prefHeight="29.0" prefWidth="218.0" />
+                  <Separator prefWidth="200.0" />
+                  <TextField fx:id="txtNumCarta" prefHeight="17.0" prefWidth="218.0" />
+                  <Separator prefWidth="200.0" />
+                  <HBox />
+                  <DatePicker fx:id="dScadenza" prefHeight="25.0" prefWidth="231.0" promptText="01/01/1980" />
+                  <Separator prefHeight="5.0" prefWidth="218.0" />
+                  <ChoiceBox fx:id="choiceCircuito" prefHeight="25.0" prefWidth="221.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="26.0" layoutY="2.0" prefHeight="203.0" prefWidth="338.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="124.0" prefHeight="33.0" prefWidth="101.0" text="IBAN *" />
+                  <Label layoutX="53.0" layoutY="172.0" prefHeight="29.0" prefWidth="112.0" text="Numero Carta*" />
+                  <Separator prefHeight="10.0" prefWidth="155.0" visible="false" />
+                  <Label prefHeight="26.0" prefWidth="87.0" text="Data Scadenza* " />
+                  <Label layoutX="59.0" layoutY="262.0" prefHeight="30.0" prefWidth="136.0" text="Circuito *" />
+                  <Separator prefHeight="6.0" prefWidth="360.0" visible="false" />
+                  <Separator prefHeight="0.0" prefWidth="360.0" visible="false" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Separator prefHeight="1.0" prefWidth="360.0" visible="false" />
+                  <Label text="I campi contrassegnati con * sono obbligatori" />
+                  <Separator prefHeight="11.0" prefWidth="360.0" visible="false" />
+                  <Separator prefHeight="4.0" prefWidth="360.0" visible="false" />
+                  <Separator prefHeight="37.0" prefWidth="360.0" visible="false" />
+               </children>
+            </VBox>
+            <HBox layoutX="364.0" layoutY="155.0" prefHeight="36.0" prefWidth="290.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="36.0" prefWidth="34.0" visible="false" />
+                  <Button fx:id="btnCancella" mnemonicParsing="false" onAction="#btnCancella" prefHeight="25.0" prefWidth="74.0" text="Cancella" />
+                  <Separator orientation="VERTICAL" prefHeight="36.0" prefWidth="34.0" visible="false" />
+                  <Button fx:id="btnConferma" mnemonicParsing="false" onAction="#btnConferma" prefHeight="25.0" prefWidth="82.0" text="Conferma" />
+               </children>
+            </HBox>
+            <Label layoutX="50.0" layoutY="199.0" text="Nb: una volta confermato non sarà possibile modificare i dati immessi" textFill="#c31717">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="35.0" layoutY="35.0" text="Nuova Carta di Credito">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

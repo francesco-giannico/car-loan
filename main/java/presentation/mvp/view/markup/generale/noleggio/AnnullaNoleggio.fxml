@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="855.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.noleggio.AnnullaNoleggio">
+   <children>
+      <Label layoutX="64.0" layoutY="178.0" text="Note" />
+      <TextArea fx:id="textAreaAnnulla" layoutX="64.0" layoutY="202.0" prefHeight="218.0" prefWidth="734.0" />
+      <Button layoutX="772.0" layoutY="475.0" mnemonicParsing="false" onAction="#btnConferma" text="Conferma" />
+      <Button layoutX="690.0" layoutY="475.0" mnemonicParsing="false" onAction="#btnIndietro" text="Indietro" />
+      <Label layoutX="91.0" layoutY="55.0" text="Annulla Noleggio">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

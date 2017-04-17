@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1228.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.SchermataGenerale">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="1228.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#logout_filebar" text="Log out" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about_filebar" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutY="28.0" prefHeight="640.0" prefWidth="1228.0">
+         <children>
+            <GridPane prefHeight="640.0" prefWidth="1228.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="208.0" minHeight="1.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="593.0" minHeight="10.0" prefHeight="550.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="113.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane>
+                     <children>
+                        <Pane prefHeight="89.0" prefWidth="1228.0" style="-fx-background-color: #000000;">
+                           <children>
+                              <ImageView fx:id="sesso" fitHeight="89.0" fitWidth="326.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Immagini/log_in_logo.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="txtBenvenuto" layoutX="638.0" layoutY="4.0" prefHeight="80.0" prefWidth="375.0" text="Benvenuto " textFill="WHITE">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnLogout" layoutX="1034.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnLogout" prefHeight="0.0" prefWidth="97.0" text="Log out">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Immagini/power.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+                    <tabs>
+                        <Tab text="Contratto">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="541.0" prefWidth="1223.0">
+                                 <children>
+                                    <TableView fx:id="tbContratto" layoutX="14.0" layoutY="118.0" prefHeight="366.0" prefWidth="665.0">
+                                       <columns>
+                                          <TableColumn fx:id="numContratto" prefWidth="108.0" text="Num. Contratto" />
+                                          <TableColumn prefWidth="99.0" text="Stato" />
+                                          <TableColumn prefWidth="157.0" text="Note" />
+                                          <TableColumn prefWidth="138.0" text="Data Apertura" />
+                                          <TableColumn prefWidth="162.0" text="Data Chiusura" />
+                                       </columns></TableView>
+                                    <Button fx:id="btnNuovoContratto" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNuovoContratto" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button fx:id="btnModificaContratto" layoutX="125.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnModificaContratto" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Button fx:id="btnChiudiContratto" layoutX="241.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnChiudiContratto" prefHeight="25.0" prefWidth="78.0" text="Chiudi" />
+                                    <Label layoutX="700.0" layoutY="118.0" text="Informazioni Aggiuntive">
+                                       <font>
+                                          <Font name="Book Antiqua" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="707.0" layoutY="146.0" text="Cliente" textFill="#1f489a" />
+                                    <Label layoutX="715.0" layoutY="170.0" text="Codice Fiscale" />
+                                    <Label layoutX="719.0" layoutY="195.0" text="Nome" />
+                                    <Label layoutX="718.0" layoutY="221.0" text="Cognome" />
+                                    <Label fx:id="lblContratto" layoutX="705.0" layoutY="250.0" text="Contratto aggiunto : " />
+                                    <Label layoutX="722.0" layoutY="276.0" text="Codice Fiscale" />
+                                    <Label layoutX="722.0" layoutY="305.0" prefHeight="17.0" prefWidth="49.0" text="Nome" />
+                                    <Label layoutX="722.0" layoutY="329.0" text="Cognome" />
+                                    <Label fx:id="lblCodFiscaleCliente" layoutX="853.0" layoutY="170.0" prefHeight="17.0" prefWidth="182.0" />
+                                    <Label fx:id="lblNomeCliente" layoutX="854.0" layoutY="195.0" prefHeight="17.0" prefWidth="204.0" />
+                                    <Label fx:id="lblCognomeCliente" layoutX="854.0" layoutY="221.0" prefHeight="17.0" prefWidth="198.0" />
+                                    <Label fx:id="lblCodiceFiscaleGestore" layoutX="860.0" layoutY="276.0" prefHeight="17.0" prefWidth="248.0" />
+                                    <Label fx:id="lblNomeGestore" layoutX="861.0" layoutY="305.0" prefHeight="17.0" prefWidth="225.0" />
+                                    <Label fx:id="lblCognomeGestore" layoutX="860.0" layoutY="329.0" prefHeight="17.0" prefWidth="222.0" />
+                                    <Button layoutX="1016.0" layoutY="14.0" mnemonicParsing="false" onAction="#refresh_contratto" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab text="Noleggio">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="523.0" prefWidth="1228.0">
+                                 <children>
+                                    <Button layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onAction="#btnCerca" prefHeight="25.0" prefWidth="97.0" text="Cerca" />
+                                    <TableView fx:id="tbNoleggio" layoutY="115.0" prefHeight="199.0" prefWidth="1228.0">
+                                       <columns>
+                                          <TableColumn minWidth="0.0" prefWidth="53.0" text="ID" />
+                                          <TableColumn prefWidth="117.0" text="Data Inizio" />
+                                          <TableColumn minWidth="0.0" prefWidth="94.0" text="Data Fine" />
+                                          <TableColumn prefWidth="96.0" text="Data Rientro" />
+                                          <TableColumn prefWidth="97.0" text="Data Ritiro" />
+                                          <TableColumn prefWidth="137.0" text="KmBase" />
+                                          <TableColumn prefWidth="117.0" text="KmRientro" />
+                                          <TableColumn prefWidth="148.0" text="Stato" />
+                                          <TableColumn prefWidth="89.0" text="N.Settimane" />
+                                          <TableColumn prefWidth="108.0" text="N.Giorni" />
+                                          <TableColumn prefWidth="169.0" text="Chilometri Limite" />
+                                       </columns></TableView>
+                                    <Button fx:id="btnNoleggio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNuovoNoleggio" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="125.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnAnnullaNoleggio" prefHeight="25.0" prefWidth="97.0" text="Annulla" />
+                                    <Button layoutX="241.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnChiudiNoleggio" prefHeight="25.0" prefWidth="78.0" text="Chiudi" />
+                                    <TextField fx:id="txtContratto" layoutX="209.0" layoutY="57.0" prefHeight="25.0" prefWidth="97.0" />
+                                    <Button fx:id="btnVOptional" layoutX="339.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnVOptional" text="Visualizza Optional " />
+                                    <MenuButton fx:id="btnMulta" layoutX="480.0" layoutY="14.0" mnemonicParsing="false" text="Multa">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Aggiungi" />
+                                        <MenuItem mnemonicParsing="false" text="Visualizza" />
+                                      </items>
+                                    </MenuButton>
+                                    <Label layoutX="7.0" layoutY="318.0" prefHeight="28.0" prefWidth="233.0" text="Informazioni aggiuntive ">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font></Label>
+                                    <Label layoutX="10.0" layoutY="342.0" prefHeight="17.0" prefWidth="59.0" text="Auto " />
+                                    <Label layoutX="229.0" layoutY="355.0" text="Targa" />
+                                    <Label layoutX="229.0" layoutY="381.0" text="Marca" />
+                                    <Label layoutX="229.0" layoutY="409.0" text="Modello" />
+                                    <ImageView fx:id="imgAutoNoleggio" fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="lblTarga" layoutX="280.0" layoutY="355.0" prefHeight="17.0" prefWidth="80.0" />
+                                    <Label fx:id="lblMarca" layoutX="280.0" layoutY="381.0" prefHeight="17.0" prefWidth="97.0" />
+                                    <Label fx:id="lblModello" layoutX="283.0" layoutY="409.0" prefHeight="17.0" prefWidth="107.0" />
+                                    <Label layoutX="366.0" layoutY="319.0" prefHeight="31.0" prefWidth="178.0" text="Sede Restituzione">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font></Label>
+                                    <Label layoutX="396.0" layoutY="348.0" text="Nome Sede" />
+                                    <Label layoutX="396.0" layoutY="374.0" text="Indirizzo" />
+                                    <Label fx:id="lblNSede" layoutX="473.0" layoutY="344.0" prefHeight="17.0" prefWidth="110.0" />
+                                    <Label fx:id="lblIndirizzo" layoutX="473.0" layoutY="370.0" prefHeight="17.0" prefWidth="115.0" />
+                                    <Label layoutX="646.0" layoutY="315.0" text="Contratto">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font></Label>
+                                    <Label layoutX="658.0" layoutY="353.0" text="Codice Contratto" />
+                                    <Label layoutX="658.0" layoutY="378.0" text="Data Apertura" />
+                                    <Label layoutX="658.0" layoutY="406.0" text="Data Chiusura" />
+                                    <Label layoutX="658.0" layoutY="433.0" text="Stato" />
+                                    <Label fx:id="lblCodContratto" layoutX="781.0" layoutY="352.0" prefHeight="17.0" prefWidth="119.0" />
+                                    <Label fx:id="lblDAp" layoutX="781.0" layoutY="378.0" prefHeight="17.0" prefWidth="129.0" />
+                                    <Label fx:id="lblDChiusura" layoutX="752.0" layoutY="406.0" prefHeight="17.0" prefWidth="128.0" />
+                                    <Label fx:id="lblStato" layoutX="740.0" layoutY="433.0" prefHeight="17.0" prefWidth="153.0" />
+                                    <Label fx:id="lblCognome" layoutX="1017.0" layoutY="419.0" prefHeight="17.0" prefWidth="198.0" />
+                                    <Label fx:id="lblNome" layoutX="1017.0" layoutY="393.0" prefHeight="17.0" prefWidth="152.0" />
+                                    <Label fx:id="lblCodFiscale" layoutX="1016.0" layoutY="368.0" prefHeight="17.0" prefWidth="182.0" />
+                                    <Label layoutX="881.0" layoutY="419.0" text="Cognome" />
+                                    <Label layoutX="881.0" layoutY="393.0" text="Nome" />
+                                    <Label layoutX="880.0" layoutY="370.0" text="Codice Fiscale" />
+                                    <Label layoutX="872.0" layoutY="309.0" text="Cliente">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font></Label>
+                                    <Label layoutX="366.0" layoutY="393.0" prefHeight="30.0" prefWidth="117.0" text="Pagamento">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font></Label>
+                                    <Label layoutX="392.0" layoutY="421.0" text="Tipo Pagamento" />
+                                    <Label fx:id="lblTPagamento" layoutX="524.0" layoutY="421.0" prefHeight="17.0" prefWidth="128.0" />
+                                    <Label layoutX="399.0" layoutY="441.0" text="Importo Momentaneo" />
+                                    <Label fx:id="lblCauzione" layoutX="526.0" layoutY="461.0" prefHeight="17.0" prefWidth="115.0" />
+                                    <Label layoutX="394.0" layoutY="461.0" text="Cauzione" />
+                                    <Label fx:id="lblPrezzo" layoutX="524.0" layoutY="441.0" prefHeight="17.0" prefWidth="107.0" />
+                                    <Label layoutX="394.0" layoutY="479.0" text="Ulteriori Addebiti" />
+                                    <Label fx:id="lblUltAddebiti" layoutX="524.0" layoutY="479.0" prefHeight="17.0" prefWidth="90.0" />
+                                    <Label layoutX="398.0" layoutY="497.0" text="IBAN" />
+                                    <Label fx:id="lblIban" layoutX="525.0" layoutY="497.0" prefHeight="17.0" prefWidth="115.0" />
+                                    <Label layoutX="123.0" layoutY="61.0" prefHeight="17.0" prefWidth="97.0" text="ID Contratto" />
+                                    <Label layoutX="337.0" layoutY="61.0" text="Stato " />
+                                    <DatePicker fx:id="dInizio" layoutX="642.0" layoutY="57.0" onAction="#dInizioAction" />
+                                    <Label layoutX="557.0" layoutY="61.0" text="Data Inizio" />
+                                    <ChoiceBox fx:id="choiceStato" layoutX="380.0" layoutY="57.0" prefWidth="150.0" />
+                                    <ImageView fitHeight="25.0" fitWidth="158.0" layoutX="15.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Immagini/ic_search_black_24dp_2x.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="1059.0" layoutY="21.0" mnemonicParsing="false" onAction="#refresh_noleggio" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabCliente" text="Cliente">
+                        <content>
+                              <AnchorPane layoutX="-12.0" layoutY="1.0" minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbCliente" layoutY="111.0" prefHeight="407.0" prefWidth="1236.0">
+                                       <columns>
+                                          <TableColumn fx:id="codFiscale" prefWidth="75.0" text="Cod.Fiscale" />
+                                          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
+                                          <TableColumn fx:id="cognome" prefWidth="75.0" text="Cognome" />
+                                          <TableColumn fx:id="sessoT" prefWidth="75.0" text="Sesso" />
+                                          <TableColumn fx:id="dataNascita" prefWidth="89.0" text="D. Nascita" />
+                                          <TableColumn fx:id="Indirizzo" minWidth="8.0" prefWidth="90.0" text="Indirizzo" />
+                                          <TableColumn fx:id="DataEmissPatente" prefWidth="120.0" text="D. Emiss. Patente" />
+                                          <TableColumn fx:id="DataScadPatente" minWidth="0.0" prefWidth="125.0" text="Data Scad. Patente" />
+                                          <TableColumn fx:id="PatenteGuida" minWidth="4.0" prefWidth="100.0" text="Patente Guida" />
+                                          <TableColumn fx:id="numCell" prefWidth="86.0" text="Num. Cell. " />
+                                          <TableColumn fx:id="numTel" prefWidth="85.0" text="Num. Tel" />
+                                          <TableColumn fx:id="PartitaIva" minWidth="0.0" prefWidth="64.0" text="P. Iva" />
+                                          <TableColumn fx:id="Email" prefWidth="90.0" text="Email" />
+                                          <TableColumn prefWidth="75.0" text="ID" visible="false" />
+                                       </columns></TableView>
+                                    <Button fx:id="btnNuovoCliente" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNuovoCliente" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button fx:id="btnModificaCliente" layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnModificaCliente" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Button layoutX="264.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnAggiungiCartaCredito" text="Aggiungi Carta Di Credito" />
+                                    <Button layoutX="435.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnVisualizzaCartaCredito" text="Visualizza Carte di Credito" />
+                                    <Button layoutX="1059.0" layoutY="21.0" mnemonicParsing="false" onAction="#refresh_cliente" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio1" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Autoveicolo">
+                          <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbAuto" layoutY="174.0" prefHeight="350.0" prefWidth="1228.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="Targa" />
+                                          <TableColumn prefWidth="75.0" text="Marca" />
+                                          <TableColumn prefWidth="75.0" text="Modello" />
+                                          <TableColumn prefWidth="152.0" text="Alimentazione principale" />
+                                          <TableColumn prefWidth="75.0" text="Colore" />
+                                          <TableColumn prefWidth="75.0" text="Cambio" />
+                                          <TableColumn prefWidth="109.0" text="Immatricolazione" />
+                                          <TableColumn prefWidth="75.0" text="Cilindrata" />
+                                          <TableColumn prefWidth="75.0" text="Fascia" />
+                                          <TableColumn prefWidth="90.0" text="Disponibilità" />
+                                          <TableColumn prefWidth="75.0" text="Prezzo" />
+                                          <TableColumn prefWidth="180.0" text="Data scadenza assicurazione" />
+                                          <TableColumn prefWidth="96.0" text="Kilometri" />
+                                       </columns></TableView>
+                                    <Button fx:id="btnNuovaAuto" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNuovaAuto" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnModificaAuto" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <MenuButton fx:id="btnManutenzione" layoutX="272.0" layoutY="14.0" mnemonicParsing="false" text="Manutenzione">
+                                      <items>
+                                        <MenuItem fx:id="aggiungi_item" mnemonicParsing="false" text="Aggiungi" />
+                                        <MenuItem fx:id="modifica_item" mnemonicParsing="false" text="Chiudi" />
+                                          <MenuItem fx:id="visualizza_item" mnemonicParsing="false" text="Visualizza" />
+                                      </items>
+                                    </MenuButton>
+                                    <ImageView fx:id="auto_image" fitHeight="138.0" fitWidth="249.0" layoutX="671.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label layoutX="14.0" layoutY="54.0" prefHeight="34.0" prefWidth="326.0" text="Sede di Appartenenza dell'auto">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font></Label>
+                                    <ChoiceBox fx:id="choice_fascia" layoutX="482.0" layoutY="14.0" prefWidth="150.0" />
+                                    <Label layoutX="443.0" layoutY="18.0" prefHeight="17.0" prefWidth="39.0" text="Fascia" />
+                                    <Label layoutX="20.0" layoutY="91.0" text="Nome :" />
+                                    <Label layoutX="20.0" layoutY="117.0" text="Indirizzo:" />
+                                    <Label layoutX="20.0" layoutY="147.0" text="Numero di telefono :" />
+                                    <Label fx:id="nome_sede" layoutX="79.0" layoutY="91.0" prefHeight="17.0" prefWidth="222.0" />
+                                    <Label fx:id="indirizzo_sede" layoutX="79.0" layoutY="117.0" prefHeight="17.0" prefWidth="243.0" />
+                                    <Label fx:id="telefono_sede" layoutX="143.0" layoutY="147.0" prefHeight="17.0" prefWidth="194.0" />
+                                    <Button layoutX="1029.0" layoutY="21.0" mnemonicParsing="false" onAction="#refresh_auto" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio2" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="paneAgenzia" text="Agenzia">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbAgenzia" layoutX="40.0" layoutY="95.0" prefHeight="414.0" prefWidth="325.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="ID" />
+                                          <TableColumn prefWidth="105.0" text="Nome" />
+                                          <TableColumn prefWidth="144.0" text="Numero di telefono" />
+                                       </columns></TableView>
+                                    <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnnuova_agenzia" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnmodifica_agenzia" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Label layoutX="450.0" layoutY="114.0" text="Supervisore dell'agenzia :">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="467.0" layoutY="172.0" text="Nome :" />
+                                    <Label layoutX="467.0" layoutY="206.0" text="Cognome :" />
+                                    <Label fx:id="nome_sa" layoutX="538.0" layoutY="172.0" prefHeight="17.0" prefWidth="89.0" />
+                                    <Label fx:id="cognome_sa" layoutX="549.0" layoutY="206.0" prefHeight="17.0" prefWidth="165.0" />
+                                    <Label fx:id="superv_agenzia" layoutX="467.0" layoutY="253.0" text="L'agenzia selezionata non ha un supervisore" textFill="#f80000">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="1027.0" layoutY="21.0" mnemonicParsing="false" onAction="#refresh_agenzia" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio3" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Sede">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbSede" layoutX="14.0" layoutY="53.0" prefHeight="452.0" prefWidth="390.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="ID" />
+                                          <TableColumn prefWidth="75.0" text="Nome" />
+                                          <TableColumn prefWidth="145.0" text="Numero di telefono" />
+                                          <TableColumn prefWidth="92.0" text="Indirizzo" />
+                                       </columns></TableView>
+                                    <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnnuova_sede" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnmodifica_sede" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Label layoutX="441.0" layoutY="387.0" prefHeight="27.0" prefWidth="213.0" text="Agenzia di Appartenenza">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
+                                    <Label layoutX="448.0" layoutY="426.0" text="Nome: " />
+                                    <Label layoutX="448.0" layoutY="457.0" text="Numero di telefono :" />
+                                    <Label fx:id="nome_agenzia" layoutX="520.0" layoutY="426.0" prefHeight="17.0" prefWidth="177.0" />
+                                    <Label fx:id="tel_agenzia" layoutX="579.0" layoutY="457.0" prefHeight="17.0" prefWidth="177.0" />
+                                    <Label layoutX="563.0" layoutY="27.0" text="Supervisori Sede">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tablesupsede" layoutX="564.0" layoutY="69.0" prefHeight="309.0" prefWidth="385.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="ID" />
+                                        <TableColumn prefWidth="84.0" text="Nome" />
+                                          <TableColumn prefWidth="114.0" text="Cognome" />
+                                          <TableColumn prefWidth="111.0" text="Codice Fiscale" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="1036.0" layoutY="9.0" mnemonicParsing="false" onAction="#refresh_sede" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio31" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Amministratore">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbAmministratore" layoutY="63.0" prefHeight="450.0" prefWidth="1222.0">
+                                       <columns>
+                                          <TableColumn prefWidth="91.00003051757812" text="ID" />
+                                          <TableColumn prefWidth="128.0" text="Nome" />
+                                          <TableColumn minWidth="6.0" prefWidth="95.0" text="Cognome" />
+                                          <TableColumn minWidth="9.0" prefWidth="78.0" text="Sesso" />
+                                          <TableColumn minWidth="0.0" prefWidth="165.0" text="Data nascita" />
+                                          <TableColumn prefWidth="153.0" text="Indirizzo" />
+                                          <TableColumn minWidth="0.0" prefWidth="139.0" text="Codice Fiscale" />
+                                          <TableColumn prefWidth="187.0" text="Numero fisso" />
+                                          <TableColumn prefWidth="198.0" text="Numero cellulare" />
+                                       </columns></TableView>
+                                    <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnnuovo_amministratore" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnmodifica_amministratore" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Button layoutX="1031.0" layoutY="14.0" mnemonicParsing="false" onAction="#refresh_amministratore" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio32" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="SupervisoreSede">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbSs" layoutY="56.0" prefHeight="309.0" prefWidth="1228.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="ID" />
+                                          <TableColumn prefWidth="140.0" text="Nome" />
+                                          <TableColumn prefWidth="124.0" text="Cognome" />
+                                          <TableColumn prefWidth="148.0" text="Data di nascita" />
+                                          <TableColumn prefWidth="134.0" text="Indirizzo" />
+                                          <TableColumn prefWidth="263.0" text="Codice Fiscale" />
+                                          <TableColumn prefWidth="161.0" text="Numero cellulare" />
+                                          <TableColumn minWidth="3.0" prefWidth="182.0" text="Numero fisso" />
+                                       </columns></TableView>
+                                    <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnnuovo_ss" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnmodifica_ss" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Label layoutX="26.0" layoutY="379.0" text="Sede di Appartenenza">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></Label>
+                                    <Label layoutX="26.0" layoutY="420.0" text="Nome :" />
+                                    <Label layoutX="26.0" layoutY="450.0" text="Indirizzo :" />
+                                    <Label layoutX="26.0" layoutY="485.0" text="Numero di telefono :" />
+                                    <Label fx:id="nome_sede_tabss" layoutX="82.0" layoutY="420.0" prefHeight="17.0" prefWidth="204.0" />
+                                    <Label fx:id="indirizzo_sede_tabss" layoutX="82.0" layoutY="450.0" prefHeight="17.0" prefWidth="204.0" />
+                                    <Label fx:id="numtel_sede_tabss" layoutX="147.0" layoutY="485.0" prefHeight="17.0" prefWidth="204.0" />
+                                    <Button layoutX="1037.0" layoutY="9.0" mnemonicParsing="false" onAction="#refresh_ss" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio33" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="SupervisoreAgenzia">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbSa" layoutX="-4.0" layoutY="68.0" prefHeight="304.0" prefWidth="1228.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="ID" />
+                                          <TableColumn prefWidth="158.0" text="Nome" />
+                                          <TableColumn prefWidth="180.0" text="Cognome" />
+                                          <TableColumn prefWidth="163.0" text="Data di nascita" />
+                                          <TableColumn prefWidth="212.0" text="Indirizzo" />
+                                          <TableColumn prefWidth="131.0" text="Codice fiscale" />
+                                          <TableColumn prefWidth="164.0" text="Numero cellulare" />
+                                          <TableColumn prefWidth="144.0" text="Numero fisso" />
+                                       </columns></TableView>
+                                    <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnnuovo_sa" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnmodifica_sa" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Label layoutX="9.0" layoutY="371.0" text="Agenzia Di appartenenza">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
+                                    <Label layoutX="27.0" layoutY="424.0" text="Numero di telefono :" />
+                                    <Label layoutX="102.0" layoutY="447.0" text="Nome:" />
+                                    <Label fx:id="nome_agenzia_tabsa" layoutX="147.0" layoutY="447.0" prefHeight="17.0" prefWidth="146.0" />
+                                    <Label fx:id="tel_agenzia_tabsa" layoutX="147.0" layoutY="424.0" prefHeight="17.0" prefWidth="146.0" />
+                                    <Button layoutX="1034.0" layoutY="9.0" mnemonicParsing="false" onAction="#refresh_sa" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio34" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Operatore">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1234.0">
+                                 <children>
+                                    <TableView fx:id="tbOperatore" layoutY="51.0" prefHeight="345.0" prefWidth="1222.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="ID" />
+                                          <TableColumn prefWidth="139.0" text="Nome" />
+                                          <TableColumn prefWidth="163.0" text="Cognome" />
+                                          <TableColumn prefWidth="145.0" text="Data di nascita" />
+                                          <TableColumn prefWidth="185.0" text="Indirizzo" />
+                                          <TableColumn prefWidth="195.0" text="Codice fiscale" />
+                                          <TableColumn prefWidth="175.0" text="Numero cellulare" />
+                                          <TableColumn prefWidth="144.0" text="Numero fisso" />
+                                       </columns></TableView>
+                                    <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnnuovo_operatore" prefHeight="25.0" prefWidth="97.0" text="Nuovo" />
+                                    <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnmodifica_operatore" prefHeight="25.0" prefWidth="97.0" text="Modifica" />
+                                    <Label layoutX="14.0" layoutY="397.0" text="Sede Di Appartenenza">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font></Label>
+                                    <Label layoutX="8.0" layoutY="425.0" text="Nome :" />
+                                    <Label layoutX="8.0" layoutY="452.0" text="Indirizzo :" />
+                                    <Label layoutX="5.0" layoutY="481.0" text="Numero di telefono :" />
+                                    <Label fx:id="nome_sede_tabOp" layoutX="76.0" layoutY="425.0" prefHeight="17.0" prefWidth="148.0" />
+                                    <Label fx:id="indirizzo_sede_tabOp" layoutX="76.0" layoutY="452.0" prefHeight="17.0" prefWidth="148.0" />
+                                    <Label fx:id="tel_sede_tabOp" layoutX="127.0" layoutY="481.0" prefHeight="17.0" prefWidth="148.0" />
+                                    <Button layoutX="1030.0" layoutY="9.0" mnemonicParsing="false" onAction="#refresh_op" prefHeight="33.0" prefWidth="97.0" text="Refresh">
+                                       <graphic>
+                                          <ImageView fx:id="refresh_noleggio35" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Immagini/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

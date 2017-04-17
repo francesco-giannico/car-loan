@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="912.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.noleggio.multa.VisualizzaMulte">
+   <children>
+      <TableView fx:id="tbMulta" layoutX="14.0" layoutY="130.0" prefHeight="182.0" prefWidth="887.0">
+        <columns>
+          <TableColumn fx:id="IDMulta" editable="false" prefWidth="96.0" text="ID" />
+          <TableColumn fx:id="DataMulta" editable="false" prefWidth="124.0" text="Data Multa" />
+            <TableColumn fx:id="DataScadenza" editable="false" minWidth="8.0" prefWidth="129.0" text="Data Scadenza" />
+            <TableColumn fx:id="DataPagamento" editable="false" prefWidth="131.0" text="Data Pagamento" />
+            <TableColumn fx:id="Importo" editable="false" prefWidth="75.0" text="Importo" />
+            <TableColumn fx:id="CostoAggiuntivo" editable="false" prefWidth="120.0" text="Costo Aggiuntivo" />
+            <TableColumn fx:id="Note" editable="false" prefWidth="120.0" text="Note" />
+            <TableColumn fx:id="Stato" editable="false" prefWidth="91.0" text="Stato" />
+        </columns>
+      </TableView>
+      <Button layoutX="797.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnOk" prefHeight="25.0" prefWidth="104.0" text="Indietro" />
+      <Button layoutX="651.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnChiudi" prefHeight="25.0" prefWidth="104.0" text="Chiudi" />
+      <Label fx:id="lblTitolo" layoutX="41.0" layoutY="28.0" text="Multe del noleggio">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

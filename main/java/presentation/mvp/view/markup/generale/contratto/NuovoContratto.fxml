@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="878.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.contratto.NuovoContratto">
+   <children>
+      <AnchorPane layoutY="107.0" prefHeight="362.0" prefWidth="874.0">
+         <children>
+            <VBox layoutX="231.0" layoutY="36.0" prefHeight="270.0" prefWidth="268.0">
+               <children>
+                  <Separator prefHeight="0.0" prefWidth="260.0" visible="false" />
+                  <Separator prefHeight="20.0" prefWidth="260.0" visible="false" />
+                  <TextArea fx:id="textNote" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Separator layoutX="299.0" layoutY="68.0" prefHeight="14.0" prefWidth="200.0" visible="false" GridPane.rowIndex="2" />
+            <VBox layoutX="27.0" layoutY="22.0" prefHeight="316.0" prefWidth="105.0">
+               <children>
+                  <Label layoutX="59.0" layoutY="262.0" prefHeight="55.0" prefWidth="105.0" text="Note" />
+               </children>
+            </VBox>
+            <HBox layoutX="539.0" layoutY="320.0" prefHeight="36.0" prefWidth="290.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="36.0" prefWidth="34.0" visible="false" />
+                  <Button fx:id="btnCancella" mnemonicParsing="false" onAction="#btnCancella" prefHeight="25.0" prefWidth="74.0" text="Cancella" />
+                  <Separator orientation="VERTICAL" prefHeight="36.0" prefWidth="34.0" visible="false" />
+                  <Button fx:id="btnConferma" mnemonicParsing="false" onAction="#btnConferma" prefHeight="25.0" prefWidth="82.0" text="Conferma" />
+               </children>
+            </HBox>
+            <Label layoutX="539.0" layoutY="36.0" prefHeight="17.0" prefWidth="96.0" text="Cliente" />
+            <TableView fx:id="tbcliente" layoutX="539.0" layoutY="62.0" prefHeight="226.0" prefWidth="323.0">
+              <columns>
+                  <TableColumn fx:id="codFiscale" prefWidth="117.0" text="Codice Fiscale" />
+                <TableColumn fx:id="nome" prefWidth="79.0" text="Nome" />
+                <TableColumn fx:id="cognome" prefWidth="126.0" text="Cognome" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="64.0" layoutY="37.0" text="Nuovo Contratto">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

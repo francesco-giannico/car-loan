@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.luoghi.Modifica_Sede">
+   <children>
+      <Label layoutX="28.0" layoutY="14.0" text="Modifica Sede">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="108.0" text="Nome* :" />
+      <Label layoutX="26.0" layoutY="155.0" text="Numero di telefono :" />
+      <TextField fx:id="nome" layoutX="144.0" layoutY="104.0" />
+      <TextField fx:id="num_telefono" layoutX="144.0" layoutY="151.0" />
+      <Button layoutX="101.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnAnnulla" prefHeight="43.0" prefWidth="101.0" text="Annulla" />
+      <Button layoutX="262.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnConferma" prefHeight="43.0" prefWidth="101.0" text="Conferma" />
+      <Label layoutX="14.0" layoutY="325.0" text="* Campo obbligatorio" />
+      <Label layoutX="56.0" layoutY="199.0" text="Indirizzo* :" />
+      <TextField fx:id="indirizzo" layoutX="144.0" layoutY="195.0" />
+      <TableView fx:id="agenzie" layoutX="453.0" layoutY="99.0" prefHeight="254.0" prefWidth="283.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="75.0" text="Nome" />
+            <TableColumn prefWidth="132.0" text="Numero di telefono" />
+        </columns>
+      </TableView>
+      <Label layoutX="453.0" layoutY="69.0" text="Scegli l'agenzia di appartenenza :" />
+   </children>
+</AnchorPane>

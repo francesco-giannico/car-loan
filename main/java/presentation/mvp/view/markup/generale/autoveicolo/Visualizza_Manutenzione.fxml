@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1313.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.mvp.view.controller.generale.autoveicolo.Visualizza_Manutenzione">
+   <children>
+      <Label layoutX="52.0" layoutY="20.0" prefHeight="62.0" prefWidth="330.0" text="Visualizza Manutenzioni">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Group />
+      <Label layoutX="629.0" layoutY="51.0" text="Auto:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="immagine" fitHeight="209.0" fitWidth="342.0" layoutX="893.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="630.0" layoutY="144.0" text="Targa: " />
+      <Label layoutX="622.0" layoutY="186.0" text="Modello:" />
+      <Button layoutX="867.0" layoutY="378.0" mnemonicParsing="false" onAction="#btntornaindietro" prefHeight="42.0" prefWidth="256.0" text="Torna indietro" />
+      <Label fx:id="targa" layoutX="669.0" layoutY="139.0" prefHeight="28.0" prefWidth="174.0" text=" ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="modello" layoutX="678.0" layoutY="180.0" prefHeight="28.0" prefWidth="166.0" text=" ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="510.0" text="N.B.: Le manutenzioni che non hanno una data di fine sono ancora aperte" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="datafine" layoutX="160.0" layoutY="308.0" prefHeight="17.0" prefWidth="144.0" />
+      <TableView fx:id="table_manutenzioni_ord" layoutX="14.0" layoutY="139.0" prefHeight="147.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="colonna_id" prefWidth="90.0" text="ID" />
+          <TableColumn fx:id="colonna_datainizio" prefWidth="127.0" text="Data Inizio" />
+            <TableColumn prefWidth="109.0" text="Data Fine" />
+            <TableColumn prefWidth="274.0" text="Motivo" />
+        </columns>
+      </TableView>
+      <Label layoutX="39.0" layoutY="109.0" prefHeight="17.0" prefWidth="256.0" text="Tutte le manutenzioni ordinarie di quest'auto :" />
+      <TableView fx:id="table_manutenzioni_stra" layoutX="14.0" layoutY="325.0" prefHeight="147.0" prefWidth="601.0">
+         <columns>
+            <TableColumn fx:id="colonna_id1" prefWidth="90.0" text="ID" />
+            <TableColumn fx:id="colonna_datainizio1" prefWidth="127.0" text="Data Inizio" />
+            <TableColumn prefWidth="109.0" text="Data Fine" />
+            <TableColumn prefWidth="274.0" text="Motivo" />
+         </columns>
+      </TableView>
+      <Label layoutX="32.0" layoutY="300.0" prefHeight="17.0" prefWidth="342.0" text="Tutte le manutenzioni straordinarie di quest'auto :" />
+   </children>
+</AnchorPane>
